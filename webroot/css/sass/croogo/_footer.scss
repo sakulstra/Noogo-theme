@@ -1,0 +1,21 @@
+#footer {
+  height: 30px;
+}
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -30px;
+}
+#footer {
+  background-color: #222;
+  vertical-align: middle;
+  & a{
+    color: #fff;
+    font-weight: 100%;
+    font-size: 18px;
+    padding-right: 8px;
+  }
+}

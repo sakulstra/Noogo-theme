@@ -1,0 +1,17 @@
+{
+	"name": "Noogo",
+	"description": "Theme for Croogo.org",
+	"screenshot": "screenshot.png",
+
+	"author": "Lukas Strassel",
+	"authorEmail": "lukasstrassel@googlemail.com",
+	"authorUrl": "http://sakulstra.org",
+
+	"menus": [
+		"main"
+	],
+
+	"regions": [
+		"right"
+	]
+}

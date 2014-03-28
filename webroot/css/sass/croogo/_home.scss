@@ -1,0 +1,21 @@
+#intro{
+  padding-bottom: 0;
+  border-bottom: 2px dashed #ccc;
+  text-align: center;
+  & img{
+    max-width:800px;
+    width:100%;
+  }
+}
+.desc-line{
+  font-size: 2.5em;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.centered{
+  text-align:center;
+}
+.i-normalize img{
+  height: 80px;
+}
