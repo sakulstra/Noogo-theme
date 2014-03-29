@@ -18,33 +18,43 @@
             }
         ?></title>
         <?php
+            echo $this->Html->css(array(
+                'style'
+            ));
+            echo $this->Html->script(array(
+                'jquery.min',
+                'bootstrap.min'
+            ));
             echo $this->Layout->meta();
             echo $this->Layout->feed();
-            echo $this->Html->script(array('jquery/jquery.min'));
             echo $this->Layout->js();
-            echo $this->Html->script(array('theme'));
-            echo $this->Html->css(array(
-                'reset',
-                '960',
-                'theme',
-            ));
             echo $scripts_for_layout;
         ?>
     </head>
     <body>
-        <div id="wrapper">
-            <div id="header">
-                <div class="container_16">
-                    <div id="logo" class="grid_4">
-                        <a href="<?php echo $this->Html->url('/'); ?>"><?php echo Configure::read('Site.title'); ?></a>
+        <div id="wrap">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <?php echo $this->Html->link('Croogo', '/', array('class' => 'logo navbar-brand',)); ?>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="http://docs.croogo.org">Documentation</a></li>
+                            <li><a href="http://blog.croogo.org">Blog</a></li>
+                            <li><a href="http://github.com/croogo/croogo">Source</a></li>
+                            <li><a href="http://github.com/croogo/croogo/issues">Issues</a></li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/croogo">Discuss</a></li>
+                            <li><a href="http://downloads.croogo.org">Download</a></li>
+                        </ul>
                     </div>
 
-                    <div id="nav" class="grid_12">
-                        <?php echo $this->Layout->menu('main'); ?>
-                        <div class="clear"></div>
-                    </div>
-
-                    <div class="clear"></div>
                 </div>
             </div>
 
@@ -75,20 +85,22 @@
 
             <div class="push"></div>
         </div>
-
         <div id="footer">
-            <div class="container_16">
-                <div class="grid_8 footer-left">
-                    Powered by <a href="<?php echo $this->Html->url('/'); ?>">Croogo</a>.
+            <div  class="container">
+                <div class="row">
+                    <div class="col-xs-3" id="links">
+                        <a href="https://github.com/croogo?tab=members">Team</a>
+                        <a href="https://github.com/croogo/croogo/blob/master/LICENSE.txt">License</a>
+                    </div>
+                    <div class="col-xs-9" id="connect">
+                        <a href="http://twitter.com/croogo"><i class="fa fa-twitter"></i></a>
+                        <a href="https://plus.google.com/u/0/communities/103533171506392970953"><i class="fa fa-google-plus"></i></a>
+                        <a href="http://github.com/croogo"><i class="fa fa-github"></i></a>
+                        <a href="https://groups.google.com/forum/?fromgroups#!forum/croogo">Groups</a>
+                        <a href="http://webchat.freenode.net/?channel=croogo">IRC</a>
+                    </div>
                 </div>
-
-                <div class="grid_8 footer-right">
-                    <a href="http://cakephp.org"><img src="<?php echo $this->Html->url('/img/cake.power.gif'); ?>" alt="CakePHP" /></a>
-                </div>
-
-                <div class="clear"></div>
             </div>
         </div>
-
     </body>
 </html>

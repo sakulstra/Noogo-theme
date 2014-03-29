@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <meta charset="utf-8">
     <title>Croogo - The CakePHP powered Content Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +15,8 @@
     echo $this->Layout->meta();
     ?>
 </head>
-
 <body>
-<div class="wrap">
+<div id="wrap">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -99,11 +98,11 @@
 <div id="footer">
     <div  class="container">
         <div class="row">
-            <div class="col-xs-6" id="links">
+            <div class="col-xs-5" id="links">
                 <a href="https://github.com/croogo?tab=members">Team</a>
                 <a href="https://github.com/croogo/croogo/blob/master/LICENSE.txt">License</a>
             </div>
-            <div class="col-xs-6" id="connect">
+            <div class="col-xs-7" id="connect">
                 <a href="http://twitter.com/croogo"><i class="fa fa-twitter"></i></a>
                 <a href="https://plus.google.com/u/0/communities/103533171506392970953"><i class="fa fa-google-plus"></i></a>
                 <a href="http://github.com/croogo"><i class="fa fa-github"></i></a>

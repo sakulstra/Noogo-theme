@@ -6,16 +6,19 @@
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  /* Negative indent footer by it's height */
-  margin: 0 auto -30px;
+  margin: 0 auto -10px;
 }
 #footer {
-  background-color: #222;
-  vertical-align: middle;
+  color: #eee;
+  background-color: #333;
   & a{
     color: #fff;
-    font-weight: 100%;
-    font-size: 18px;
-    padding-right: 8px;
+    padding: 4px 4px;
   }
+}
+#connect a{
+  float:right;
+}
+#links a{
+  float:left;
 }

@@ -1,4 +1,7 @@
-span{
+html,body {
+  height: 100%;
+}
+h2 span{
   border-bottom: 2px dashed #888;
   font-weight:bold;
 }
