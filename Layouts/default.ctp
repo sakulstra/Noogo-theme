@@ -32,47 +32,43 @@
     ?>
 </head>
 <body>
-<div id="wrap">
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <?php echo $this->Html->link('Croogo', '/', array('class' => 'logo navbar-brand',)); ?>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://docs.croogo.org">Documentation</a></li>
-                    <li><a href="http://blog.croogo.org">Blog</a></li>
-                    <li><a href="http://github.com/croogo/croogo">Source</a></li>
-                    <li><a href="http://github.com/croogo/croogo/issues">Issues</a></li>
-                    <li><a href="https://groups.google.com/forum/?fromgroups#!forum/croogo">Discuss</a></li>
-                    <li><a href="http://downloads.croogo.org">Download</a></li>
-                </ul>
-            </div>
-
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <?php echo $this->Html->link('Croogo', '/', array('class' => 'logo navbar-brand',)); ?>
         </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://docs.croogo.org">Documentation</a></li>
+                <li><a href="http://blog.croogo.org">Blog</a></li>
+                <li><a href="http://github.com/croogo/croogo">Source</a></li>
+                <li><a href="http://github.com/croogo/croogo/issues">Issues</a></li>
+                <li><a href="https://groups.google.com/forum/?fromgroups#!forum/croogo">Discuss</a></li>
+                <li><a href="http://downloads.croogo.org">Download</a></li>
+            </ul>
+        </div>
+
     </div>
+</div>
+<div id="wrap">
     <?php
     if ($this->params['controller'] == 'pages' && $this->params['action'] == 'display' && $this->request->params['pass'][0] == 'home') {
         echo $this->element('intro');
     }
     ?>
     <div id="main" class="container">
-        <div id="content">
-            <div class="<?php echo ($this->params['controller'] == 'nodes')? 'grid-md-8':'grid-md-12';  ?>">
-                <?php echo $content_for_layout; ?>
-            </div>
+        <div id="content" class="<?php echo ($this->params['controller'] == 'nodes')? 'col-md-9':'col-md-12';?>">
+            <?php echo $content_for_layout; ?>
         </div>
         <?php if ($this->params['controller'] == 'nodes') :?>
-            <div id="right">
-                <div class="grid_4">
-                    <?php echo $this->Layout->blocks('right'); ?>
-                </div>
+            <div id="right" class="col-md-3">
+                <?php echo $this->Layout->blocks('right'); ?>
             </div>
         <?php endif; ?>
     </div>
